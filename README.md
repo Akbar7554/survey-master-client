@@ -16,4 +16,9 @@ Currently, two official plugins are available:
 - and also try to implement chart by data wise and try to payment system.
 
 
+# Create a readme with what challenges you have faced for the backend.
+
+- In this project i face many more problems like generate jwt token , set admin verify , surveyor verify . different types of routes setup and post get patch delete to the specific user role wise data into the database.
+
+
 # Live link : https://survey-master-6e8c9.web.app/
