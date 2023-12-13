@@ -53,8 +53,19 @@ const Navbar = () => {
         </Link>
       </li>
       <li className="list-none ml-5">
-        <Link className="md:text-lg font-semibold text-gray-200" to="/allSurvey">
+        <Link
+          className="md:text-lg font-semibold text-gray-200"
+          to="/allSurvey"
+        >
           Surveys
+        </Link>
+      </li>
+      <li className="list-none ml-5">
+        <Link
+          to="paymentCart"
+          className="md:text-lg font-semibold text-gray-200"
+        >
+          Pro
         </Link>
       </li>
       <li className="list-none ml-5">
@@ -64,11 +75,14 @@ const Navbar = () => {
       </li>
       <li className="list-none ml-5">
         <Link className="md:text-lg font-semibold text-gray-200" to="">
-          My Blogs
+          Blogs
         </Link>
       </li>
       <li className="list-none ml-5">
-        <Link className="md:text-lg font-semibold text-gray-200" to="/dashboard/survey">
+        <Link
+          className="md:text-lg font-semibold text-gray-200"
+          to="/dashboard/survey"
+        >
           Dashboard
         </Link>
       </li>

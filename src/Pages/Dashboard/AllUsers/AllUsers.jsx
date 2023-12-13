@@ -12,9 +12,23 @@ const AllUsers = () => {
     queryKey: ["users"],
     queryFn: async () => {
       const res = await axiosSecure.get("/users")
+      console.log(res.data)
       return res.data
     },
   })
+
+  const { data: proUsers = [] } = useQuery({
+    queryKey: ["proUsers"],
+    queryFn: async () => {
+      const res = await axiosSecure.get("/proUsers")
+      console.log(proUsers)
+      return res?.data
+    },
+  })
+    
+    if (proUsers?.email === users?.email) {
+        console.log("pro");
+    }
 
   const handleMakeAdmin = (user) => {
     axiosSecure.patch(`/users/admin/${user._id}`).then((res) => {
@@ -29,8 +43,7 @@ const AllUsers = () => {
         refetch()
       }
     })
-    }
-    
+  }
 
   const handleMakeSurveyor = (user) => {
     axiosSecure.patch(`/users/surveyor/${user._id}`).then((res) => {
@@ -85,8 +98,9 @@ const AllUsers = () => {
               <th>#</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Role(Admin)</th>
-              <th>Role(Surveyor)</th>
+              <th>Admin</th>
+              <th>Surveyor</th>
+              <th>ProUser</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -114,9 +128,7 @@ const AllUsers = () => {
                 <td>
                   {user.role === "surveyor" ? (
                     <>
-                      <FaUserTag
-                        className="text-2xl text-blue-500"
-                      ></FaUserTag>
+                      <FaUserTag className="text-2xl text-blue-500"></FaUserTag>
                     </>
                   ) : (
                     <button
@@ -129,6 +141,7 @@ const AllUsers = () => {
                     </button>
                   )}
                 </td>
+                <td>{proUsers?.email === users?.email ? "Pro" : ""}</td>
                 <td>
                   <button onClick={() => handleDeleteUser(user)} className="">
                     <DeleteIcon

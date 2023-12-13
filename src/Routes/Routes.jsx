@@ -16,6 +16,8 @@ import ManageSurvey from "../Pages/Dashboard/ManageSurvey/ManageSurvey"
 import UpdateSurvey from "../Pages/Dashboard/UpdateSurvey/UpdateSurvey"
 import AllSurvey from "../Shared/AllSurvey/AllSurvey"
 import SurveyDetails from "../components/SurveyDetails/SurveyDetails"
+import Payment from "../Pages/Dashboard/Payment/Payment"
+import PaymentCart from "../Pages/Homes/PaymentCart/PaymentCart"
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +35,22 @@ export const router = createBrowserRouter([
       {
         path: "register",
         element: <Register></Register>,
+      },
+      {
+        path: "paymentCart",
+        element: (
+          <PrivateRoute>
+            <PaymentCart></PaymentCart>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "payment",
+        element: (
+          <PrivateRoute>
+            <Payment></Payment>
+          </PrivateRoute>
+        ),
       },
       {
         path: "allSurvey",
@@ -73,6 +91,7 @@ export const router = createBrowserRouter([
           </AdminRoute>
         ),
       },
+
       // Surveyor related route
       {
         path: "surveyorHome",

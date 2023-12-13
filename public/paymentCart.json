@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "product": "Widget A",
+    "category": "Electronics",
+    "brand": "TechCo",
+    "price": 19.99,
+    "currency": "USD",
+    "discount": 0.05,
+    "availability": true,
+    "specifications": {
+      "weight": "1.5 lbs",
+      "dimensions": "5 x 3 x 2 inches"
+    },
+    "customerReviews": [
+      { "user": "Customer1", "rating": 4.5, "comment": "Great product!" },
+      { "user": "Customer2", "rating": 3.8, "comment": "Good but could be better" }
+    ]
+  },
+  {
+    "id": 2,
+    "product": "Gizmo B",
+    "category": "Gadgets",
+    "brand": "InnovateTech",
+    "price": 29.99,
+    "currency": "USD",
+    "discount": 0.1,
+    "availability": false,
+    "specifications": {
+      "weight": "2 lbs",
+      "dimensions": "6 x 4 x 3 inches"
+    },
+    "customerReviews": [
+      { "user": "Customer3", "rating": 3.2, "comment": "Not satisfied with the quality" },
+      { "user": "Customer4", "rating": 4.0, "comment": "Value for money" }
+    ]
+  },
+  {
+    "id": 3,
+    "product": "Thingamajig C",
+    "category": "Tools",
+    "brand": "ToolMaster",
+    "price": 39.99,
+    "currency": "USD",
+    "discount": 0,
+    "availability": true,
+    "specifications": {
+      "weight": "3 lbs",
+      "dimensions": "7 x 5 x 4 inches"
+    },
+    "customerReviews": [
+      { "user": "Customer5", "rating": 4.8, "comment": "Excellent product!" },
+      { "user": "Customer6", "rating": 4.2, "comment": "Does the job well" }
+    ]
+  }
+]
