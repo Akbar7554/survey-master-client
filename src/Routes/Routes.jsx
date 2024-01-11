@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
       {
         path: "allSurvey",
         element: <AllSurvey></AllSurvey>,
-        // loader: () => fetch('https://survey-master-server-kappa.vercel.app/survey'),
+        // loader: () => fetch('http://localhost:5000/survey'),
       },
       {
         path: "/surveyDetails/:id",
@@ -125,9 +125,7 @@ export const router = createBrowserRouter([
           </SurveyorRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://survey-master-server-kappa.vercel.app/survey/${params.id}`
-          ),
+          fetch(`http://localhost:5000/survey/${params.id}`),
       },
     ],
   },

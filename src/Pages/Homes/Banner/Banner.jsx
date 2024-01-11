@@ -22,7 +22,7 @@ const Banner = () => {
       </AwesomeSlider>
       <div
         type="button"
-        className="absolute top-60 left-28 z-30 w-[200px] md:w-[600px] lg:w-[1300px]"
+        className="absolute top-60 left-28 z-30 "
         data-carousel-next
       >
         <h2 className="text-center text-md md:mb-10 font-bold text-gray-50 md:text-6xl">

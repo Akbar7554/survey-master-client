@@ -46,7 +46,7 @@ const Navbar = () => {
 
 
   const pages = (
-    <div className="w-[50%] mx-auto lg:flex">
+    <div className="bg-[#2E3B55] p-2 lg:mx-auto lg:flex">
       <li className="list-none ml-5">
         <Link className="md:text-lg font-semibold text-gray-200" to="/">
           Home
@@ -97,9 +97,7 @@ const Navbar = () => {
             <Toolbar>
               <Box
                 component="img"
-                sx={{
-                  height: 50,
-                }}
+                className="h-10 w-10 md:w-10 lg:w-16 lg:h-14 lg:p-1"
                 alt="Your logo."
                 src={logo}
               />
@@ -110,7 +108,6 @@ const Navbar = () => {
               component="a"
               href="#app-bar-with-responsive-menu"
               sx={{
-                mr: 2,
                 display: { xs: "none", md: "flex" },
                 fontFamily: "monospace",
                 fontWeight: 700,
@@ -153,24 +150,7 @@ const Navbar = () => {
                 {pages}
               </Menu>
             </Box>
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              SURVEY
-            </Typography>
+
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages}
             </Box>
@@ -218,7 +198,7 @@ const Navbar = () => {
                 </label>
                 <ul
                   tabIndex={0}
-                  className="mt-3 z-40 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                  className="mt-3 z-40 p-2 shadow menu menu-sm dropdown-content bg-[#2E3B55] text-gray-100 rounded-box w-52"
                 >
                   <li>
                     <a className="justify-between">{user?.displayName}</a>

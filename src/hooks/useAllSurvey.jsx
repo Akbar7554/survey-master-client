@@ -8,7 +8,7 @@ const useAllSurvey = () => {
   // const [survey, setSurvey] = useState([])
   // const [loading, setLoading] = useState(true)
   // useEffect(() => {
-  //     fetch("https://survey-master-server-kappa.vercel.app/survey")
+  //     fetch("http://localhost:5000/survey")
   //         .then(res => res.json())
   //         .then(data => {
   //             setSurvey(data)
